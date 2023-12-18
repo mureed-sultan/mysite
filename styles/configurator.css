@@ -1,0 +1,394 @@
+.medium-btn {
+  padding: 4px 12px;
+  min-width: 80px;
+}
+.icon-btn {
+  width: 25px;
+  cursor: pointer;
+  fill: white;
+  opacity: 0.8;
+  display: inline-block;
+}
+.icon-btn:hover {
+    opacity: 1;
+  }
+.play-btn {
+  border-radius: 4px;
+}
+.play-btn .stop {
+    display: none;
+  }
+.play-btn.active .stop {
+      display: block;
+    }
+.play-btn.active .play  {
+      display: none;
+    }
+.file-btn input {
+    position: fixed;
+    left: -100px;
+    top: -100px;
+  }
+body.panel-open #main-content, body.panel-open #main-content .fixed {
+    width: calc(100% - 500px);
+    left: 500px;
+  }
+.side-panel {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 301;
+  width: 500px;
+  border-right: 1px solid white;
+  background: black;
+}
+.side-panel .menu-dropdown-btn {
+    width: 28px;
+    fill: white;
+    margin-top: 4px;
+  }
+.side-panel .controls {
+    font-size: 1.1rem;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+  }
+.side-panel a {
+    cursor: pointer;
+  }
+.side-panel * {
+    -webkit-box-sizing: border-box;
+            box-sizing: border-box;
+  }
+.side-panel .container {
+    position: relative;
+    top: 40px;
+    padding: 10px 6px 10px 10px;
+    height: calc(100% - 50px);
+    overflow: auto;
+  }
+.side-panel .editor-btn {
+    background: #444;
+    color: white;
+    display: inline-block;
+    border-radius: 5px;
+    padding: 2px 6px;
+    cursor: pointer;
+    border: none;
+    -webkit-box-shadow: none;
+            box-shadow: none;
+  }
+.side-panel .editor-btn:hover {
+      background: #666;
+    }
+.side-panel .editor-btn.disabled {
+      pointer-events: none;
+      background: #333;
+      border: 1px solid #222;
+      color: #bbb;
+    }
+.side-panel .bold {
+    font-weight: bold;
+  }
+.configurator-launch {
+  position: fixed;
+  z-index: 202;
+  right: 70px;
+  top: 10px;
+  background: rgba(0, 0, 0, 0.2);
+  padding: 4px;
+  min-height: 40px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
+}
+.configurator-launch .time-configs {
+    display: none;
+  }
+.configurator-launch .row {
+    height: 25px;
+    cursor: pointer;
+  }
+.configurator-launch:hover .time-configs {
+      display: block;
+    }
+.configurator-launch .current-time {
+    font-family: monospace;
+    padding: 0 4px;
+    background: rgba(0, 0, 0, 0.75);
+  }
+.configurator-launch .icon-btn {
+    margin: 0 3px;
+  }
+.configurator-launch .play-btn .play, .configurator-launch .play-btn .stop {
+      width: 27px;
+    }
+.configurator-launch .waterfall-btn {
+    width: 21px;
+    height: 21px;
+    border-radius: 50%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    background: #fff;
+    overflow: hidden;
+  }
+.configurator-launch .waterfall-btn svg {
+      fill: #000;
+      position: relative;
+      width: 21px;
+      height: 21px;
+      left: 3px;
+      top: 2px;
+    }
+.lightbox {
+  z-index: 99;
+  background: rgba(0, 0, 0, 0.3);
+}
+.lightbox .alert {
+    width: 100%;
+    max-width: 500px;
+    height: 200px;
+    background: #fff;
+    color: #333;
+    text-align: center;
+    position: relative;
+  }
+.lightbox .alert button {
+      margin: 40px 12px 0;
+    }
+.lightbox .popup-close {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    width: 35px;
+    cursor: pointer;
+  }
+.range-control {
+  position: relative;
+  width: 100%;
+}
+.range-control [type="number"] {
+    float: left;
+    width: 20%;
+  }
+.timeline-panel .timeline {
+    margin: 0 -6px 0 -10px;
+  }
+.timeline-panel .tab-btn {
+    text-align: center;
+    cursor: pointer;
+    display: inline-block;
+    background: #999;
+    margin: 0 10px;
+    width: 120px;
+    padding: 2px 0;
+  }
+.timeline-panel .tab-btn.active {
+      background: #aaa;
+      border-bottom: 2px solid #f9e932;
+    }
+.timeline-panel .tab-controls {
+    margin-top: 20px;
+    text-align: center;
+  }
+.timeline-panel .tab-controls .icon-btn {
+      width: 40px;
+    }
+.timeline-panel .each {
+    margin: 4px 0;
+    height: 30px;
+    overflow: hidden;
+    margin-top: 12px;
+  }
+.timeline-panel .each > .title {
+      cursor: pointer;
+      position: relative;
+      height: 30px;
+      margin: 0;
+      padding: 0 8px;
+    }
+.timeline-panel .each > .title .icon-btn {
+        position: absolute;
+        top: 0;
+        right: 4px;
+      }
+.timeline-panel .each > .title::after {
+        content: " ";
+        width: 0;
+        height: 0;
+        border-left: 6px solid transparent;
+        border-right: 6px solid transparent;
+        border-bottom: 6px solid white;
+        position: absolute;
+        right: 45px;
+        top: 12px;
+        -webkit-transition: 0.7s ease all;
+        transition: 0.7s ease all;
+      }
+.timeline-panel .each.open {
+      height: auto;
+    }
+.timeline-panel .each.open > .title::after {
+        -webkit-transform: rotate(180deg);
+                transform: rotate(180deg);
+      }
+.timeline-panel .field {
+    width: 100%;
+    float: left;
+    background: rgba(255, 255, 255, 0.1);
+    padding: 0 8px;
+  }
+.timeline-panel .field:not(:last-child) {
+      margin-bottom: 15px;
+    }
+.timeline-panel .field .menu {
+      right: 5px;
+      left: auto;
+    }
+.timeline-panel .row {
+    margin-top: 12px;
+    margin-bottom: 6px;
+  }
+.timeline-panel .row .buttons {
+      display: inline-block;
+      float: right;
+      -webkit-user-select: none;
+         -moz-user-select: none;
+          -ms-user-select: none;
+              user-select: none;
+    }
+.timeline-panel .row .buttons > * {
+        display: inline-block;
+      }
+.timeline-panel .anim-time {
+    display: inline-block;
+    width: 60%;
+  }
+.timeline-panel .anim-time .time-wrap {
+      display: inline-block;
+      vertical-align: middle;
+      margin-left: 65px;
+    }
+.timeline-panel .anim-time [type="number"] {
+      width: 90px;
+      margin-left: 8px;
+    }
+.timeline-panel .timeline-row {
+    height: 50px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+.timeline-panel .timeline-row > * {
+      float: left;
+    }
+.timeline-panel .timeline-row > *:nth-child(1) {
+        width: 80px;
+      }
+.timeline-panel .timeline-row > *:nth-child(2) {
+        width: 240px;
+      }
+.timeline-panel .timeline-row > *:nth-child(3) {
+        width: 100px;
+        padding-left: 4px;
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-box-pack: end;
+            -ms-flex-pack: end;
+                justify-content: flex-end;
+      }
+.timeline-panel .timeline-row .icon-btn {
+      margin: 0;
+      width: 26px;
+    }
+.timeline-panel .timeline-row input {
+      display: inline-block;
+      float: left;
+    }
+.timeline-panel .timeline-row [type="number"] {
+      width: 90px;
+      margin-left: 8px;
+    }
+.timeline-panel .top-row {
+    margin-left: 8px;
+  }
+.timeline-panel .icon-btn {
+    width: 28px;
+    margin-left: 6px;
+  }
+.timeline-panel .icon-btn.small {
+      width: 24px;
+    }
+.timeline-panel .icon-btn.bit-flag {
+      opacity: 0.2;
+    }
+.timeline-panel .icon-btn.on {
+      opacity: 1;
+    }
+.waterfall .item > * {
+    display: inline-block;
+    vertical-align: middle;
+    position: relative;
+  }
+.waterfall input {
+    font-size: 14px;
+    width: 60px;
+  }
+.waterfall .outer {
+    width: 190px;
+    position: relative;
+    height: 10px;
+    background: #333;
+  }
+.waterfall .inner {
+    position: absolute;
+    height: 100%;
+    background: #99ff99;
+  }
+.waterfall .target-btn {
+    max-width: 125px;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+  }
+.waterfall .play-btn {
+    width: 20px;
+  }
+.waterfall .row {
+    margin-top: 12px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: end;
+        -ms-flex-pack: end;
+            justify-content: flex-end;
+  }
+.waterfall .row > * {
+      margin-left: 10px;
+    }
